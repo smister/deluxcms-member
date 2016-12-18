@@ -89,7 +89,7 @@ abstract class FMemberController extends Controller
     {
         $model = new LoginForm();
         if (Yii::$app->request->isPost && $model->load(Yii::$app->request->post())){
-            if (Yii::$app->request->isAjax) { //这里是ajax提交的
+            if (Yii::$app->request->post('loginAjax')) {
                 Yii::$app->response->format = Response::FORMAT_JSON;
                 return $model->loginByAjax();
             } elseif ($model->login()) {

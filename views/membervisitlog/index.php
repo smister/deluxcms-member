@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     [
                         'attribute' => 'member_id',
                         'content' => function ($model, $key, $index, $column) {
-                            return Html::a($model->member->username, ['member/view', 'id' => $model->member_id], ['data-pjax' => 0]);
+                            return Html::a(isset($model->member) ? $model->member->username : '已删除', ['member/view', 'id' => $model->member_id], ['data-pjax' => 0]);
                         }
                     ],
                     'ip',

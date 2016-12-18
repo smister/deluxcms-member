@@ -41,6 +41,7 @@ class LoginWidget extends Widget
             'authUrl' => $this->authUrl,
             'popupMode' => $this->popupMode,
             'authClientOptions' => $this->authClientOptions,
+            'loginAjax' => $this->loginAjax,
         ]);
     }
 

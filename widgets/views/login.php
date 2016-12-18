@@ -16,6 +16,7 @@ use yii\captcha\Captcha;
              'options' => $authClientOptions
         ]); ?>
     <?php endif; ?>
+    <?= Html::hiddenInput('loginAjax', $loginAjax); ?>
     <?= $form->field($model, 'username')->textInput() ?>
     <?= $form->field($model, 'password')->passwordInput() ?>
     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
